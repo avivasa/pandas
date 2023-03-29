@@ -30,3 +30,8 @@ dados['new_column']=dados['col1'] > dados['col2']
 ### iterate over pandas dataframe
 for index, row in df.iterrows():
     print(row['c1'], row['c2'])
+
+# Drop NA Values
+```python
+df = df.dropna()
+```
