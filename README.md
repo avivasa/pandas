@@ -4,7 +4,7 @@ Tutorial
 ## Index
 ### Reset index 
 ```python
-df = df.assign(index1=df.index)
+df = df.rename_axis('Date').reset_index()
 ```
 
 
