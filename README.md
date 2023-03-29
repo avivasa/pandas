@@ -3,11 +3,22 @@ Tutorial
 
 ## Index
 ### Reset index 
+```python
 df = df.assign(index1=df.index)
+```
+
 
 
 ## Test if dataframe is Empty
-df.empty
+```python
+if df.empty:
+    print("Dataframe is empty")
+```
+
     
 ## Get last n records of a Pandas DataFrame
+```python
+n = 10 
 df.tail(n)
+```
+
