@@ -33,6 +33,47 @@ dados['new_column']=dados['col1'] > dados['col2']
 for index, row in df.iterrows():
     print(row['c1'], row['c2'])
 ```    
+
+## using iterrows()
+```python
+# create a sample dataframe
+df = pd.DataFrame({'col1': [1, 2, 3], 'col2': [4, 5, 6]})
+
+# iterate over rows
+for index, row in df.iterrows():
+    print(index, row['col1'], row['col2'])
+```    
+
+### iloc
+```python
+import pandas as pd
+
+# create a sample dataframe
+df = pd.DataFrame({'col1': [1, 2, 3], 'col2': [4, 5, 6]})
+
+# iterate over rows using iloc
+for i in range(len(df)):
+    row = df.iloc[i]
+    print(row['col1'], row['col2'])
+``` 
+
+## using next(row_iterator)
+```python
+import pandas as pd
+
+# create a sample dataframe
+df = pd.DataFrame({'col1': [1, 2, 3, 4], 'col2': [5, 6, 7, 8]})
+
+# get the iterator for rows starting from the third position
+row_iterator = df.iterrows()
+next(row_iterator)
+next(row_iterator)
+
+# iterate over rows starting from the third position
+for index, row in row_iterator:
+    print(index, row['col1'], row['col2'])
+```  
+
 ## iterate over two previous rows
 ```python
 # create a sample dataframe
