@@ -22,3 +22,7 @@ n = 10
 df.tail(n)
 ```
 
+## Compare two dataframes columns 
+```python
+dados['new_column']=dados['col1'] > dados['col2']
+```
