@@ -97,6 +97,23 @@ for index, row in df.iterrows():
     prev_row_1 = row
 ```
 
+## iterate over rows using iterrows
+```python
+for index, row in df.iterrows():
+    col1_value = row['col1']
+    col2_value = row['col2']
+    print(index, col1_value, col2_value)
+```
+## iterate over rows using itertuples
+
+```python
+for row in df.itertuples():
+    index = row.Index
+    col1_value = row.col1
+    col2_value = row.col2
+    print(index, col1_value, col2_value)
+```
+
 # Drop NA Values
 ```python
 df = df.dropna()
