@@ -118,3 +118,9 @@ for row in df.itertuples():
 ```python
 df = df.dropna()
 ```
+
+# List and Dataframe
+## Add a list as new column on dataframe 
+```python
+pd.concat([pd.DataFrame(GD),dados], axis=1)
+```
