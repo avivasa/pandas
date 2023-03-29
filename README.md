@@ -29,12 +29,12 @@ dados['new_column']=dados['col1'] > dados['col2']
 
 # iterate over pandas dataframe
 ## Using iterrows
-'''
+```python
 for index, row in df.iterrows():
     print(row['c1'], row['c2'])
-'''    
+```    
 ## iterate over two previous rows
-'''
+```python
 # create a sample dataframe
 df = pd.DataFrame({'col1': [1, 3, 2, 5, 4], 'col2': [4, 5, 6, 7, 8]})
 
@@ -54,7 +54,7 @@ for index, row in df.iterrows():
     # update the two previous rows
     prev_row_2 = prev_row_1
     prev_row_1 = row
-'''
+```
 
 # Drop NA Values
 ```python
