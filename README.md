@@ -122,5 +122,7 @@ df = df.dropna()
 # List and Dataframe
 ## Add a list as new column on dataframe 
 ```python
-pd.concat([pd.DataFrame(GD),dados], axis=1)
+# transform list into a new dataframe
+List = pd.DataFrame (list, columns = ['List'])
+df = df.append(List)
 ```
