@@ -126,3 +126,14 @@ df = df.dropna()
 List = pd.DataFrame (list, columns = ['List'])
 df = df.append(List)
 ```
+
+##  Add a Column to a Pandas DataFrame Based on an If-Else Condition
+```python
+conditions = [
+    (df['Close'] < lower_band),
+    (df['Close'] > upper_band),
+    ]
+    values = [1, -1]
+
+    df['Average_Channel'] = np.select(conditions, values)
+```    
