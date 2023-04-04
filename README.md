@@ -137,3 +137,8 @@ conditions = [
 
     df['Average_Channel'] = np.select(conditions, values)
 ```    
+
+# How to print pandas DataFrame without index
+```python
+print(df.to_string(index=False))
+```    
