@@ -113,8 +113,14 @@ for row in df.itertuples():
     col2_value = row.col2
     print(index, col1_value, col2_value)
 ```
+# Drop
 
-# Drop NA Values
+## Drop Multiple Columns
+```python
+df.drop(['tr1', 'tr2','tr3','tr','pdm','ndm','atr','pdi','ndi','dx'], axis=1,inplace=True)
+```
+
+## Drop NA Values
 ```python
 df = df.dropna()
 ```
