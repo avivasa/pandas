@@ -148,3 +148,27 @@ conditions = [
 ```python
 print(df.to_string(index=False))
 ```    
+##  Infinity Values
+#### https://www.geeksforgeeks.org/check-if-dataframe-contains-infinity-in-python-pandas/
+
+```python
+ds = df.isin([np.inf, -np.inf])
+print(ds)
+  
+# printing the count of infinity values
+print()
+print("printing the count of infinity values")
+  
+count = np.isinf(df).values.sum()
+print("It contains " + str(count) + " infinite values")
+  
+# counting infinity in a particular column name
+c = np.isinf(df['Weight']).values.sum()
+print("It contains " + str(c) + " infinite values")
+  
+# printing column name where infinity is present
+print()
+print("printing column name where infinity is present")
+col_name = df.columns.to_series()[np.isinf(df).any()]
+print(col_name)
+```  
